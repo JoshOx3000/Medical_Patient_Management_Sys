@@ -3,6 +3,7 @@ SQL-based database is designed to manage patients, doctors, visits, treatments, 
 
 🏥 Patient Management System – SQL Database for Hospitals
 📌 Project Overview
+
 The Patient Management System is a relational SQL database designed for hospitals and healthcare facilities to manage critical information about patients, doctors, medical visits, treatments, prescriptions, and billing. This project demonstrates core concepts of database design, normalization, indexing, and stored procedures to simulate real-world healthcare workflows.
 
 🧱 Database Structure
@@ -11,6 +12,7 @@ Database Name: Patient_Management_SysDB
 This database contains the following tables:
 
 Table	Description
+
 Patients	Stores patient demographics and insurance information
 Doctors	Contains doctor contact details and specialties
 Visits	Logs medical visits with reasons and diagnoses
