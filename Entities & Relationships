@@ -1,0 +1,46 @@
+Entities & Relationships
+Here are the key entities and how they’re connected:
+
+Entity	      Primary Key	        Relationships
+Patients	    PatientID	        One-to-many with Visits
+Doctors	      DoctorID	          One-to-many with Visits
+Visits	      VisitID	          Many-to-one with Patients and Doctors<br>One-to-many with Treatments, Prescriptions, Billing
+Treatments    TreatmentID	      Many-to-one with Visits
+Medications	  MedicationID	    One-to-many with Prescriptions
+Prescriptions	PrescriptionID	Many-to-one with Visits and Medications
+Billing	       BillingID	    One-to-one or one-to-many with Visits (depends on business logic)
+
+🔗 ERD Structure Overview
+Patients ⇄ Visits
+
+Each patient can have multiple visits
+
+Doctors ⇄ Visits
+
+Each doctor can attend multiple visits
+
+Visits ⇄ Treatments
+
+A visit can result in multiple treatments
+
+Visits ⇄ Prescriptions ⇄ Medications
+
+A visit can generate multiple prescriptions
+
+Each prescription corresponds to one medication
+
+Visits ⇄ Billing
+
+Each visit has one billing record
+
+📊 Visualization (Text-Based)
+Patients (PatientID) ─────────┐
+                             │
+Doctors (DoctorID) ──────┐   │
+                         │   │
+                   Visits (VisitID)
+                         │   │
+        ┌────────────┬───┴───┴────────────┐
+  Treatments     Prescriptions        Billing
+                     │
+             Medications (MedicationID)
